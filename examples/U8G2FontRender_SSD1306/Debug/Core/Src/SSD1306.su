@@ -1,0 +1,5 @@
+SSD1306.c:15:19:SSD1306_I2C_Write	32	static
+SSD1306.c:52:19:SSD1306_Init	24	static
+SSD1306.c:75:19:SSD1306_Update	32	static
+SSD1306.c:90:19:SSD1306_Fill	16	static
+SSD1306.c:96:19:SSD1306_DrawPixel	16	static

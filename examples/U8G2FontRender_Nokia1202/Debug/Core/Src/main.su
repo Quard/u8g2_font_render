@@ -1,0 +1,6 @@
+main.c:67:5:main	48	static
+main.c:123:6:SystemClock_Config	72	static
+main.c:159:13:MX_GPIO_Init	32	static
+main.c:182:6:N1202_DrawFgPixel	16	static
+main.c:186:6:N1202_DrawBgPixel	16	static
+main.c:195:6:Error_Handler	4	static

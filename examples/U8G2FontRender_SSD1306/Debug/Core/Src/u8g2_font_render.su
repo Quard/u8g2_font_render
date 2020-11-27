@@ -1,0 +1,12 @@
+u8g2_font_render.c:20:18:U8G2FontRender	96	static
+u8g2_font_render.c:32:18:U8G2FontRender_ParseHeader	48	static
+u8g2_font_render.c:43:6:U8G2FontRender_PrintChar	40	static
+u8g2_font_render.c:57:6:U8G2FontRender_Print	32	static
+u8g2_font_render.c:66:9:font_get_unsigned_bits	24	static
+u8g2_font_render.c:90:8:font_get_signed_bits	24	static
+u8g2_font_render.c:97:10:font_get_start_symbol_search_postition	24	static
+u8g2_font_render.c:108:8:font_get_glyph	24	static
+u8g2_font_render.c:127:6:font_parse_glyph_header	16	static
+u8g2_font_render.c:135:9:font_draw_start_x_position	16	static
+u8g2_font_render.c:139:9:font_draw_start_y_position	16	static
+u8g2_font_render.c:143:6:font_render_glyph	40	static
