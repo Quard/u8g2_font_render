@@ -6,7 +6,7 @@ Platform and display agnostic library for render fonts from [u8g2](https://githu
 
 U8g2 is a great project that has many fonts out of the box. As well as a set of scripts to generate new fonts from fonts for your system.
 
-![](/Users/quard/Projects/own/u8g2_font_render/example.jpg)
+![](examples/example.jpg)
 
 ## How to use
 
