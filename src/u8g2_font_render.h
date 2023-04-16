@@ -8,8 +8,9 @@
 #ifndef INC_U8G2_FONT_RENDER_H_
 #define INC_U8G2_FONT_RENDER_H_
 
-#include "stm32f1xx_hal.h"
+#include "stm32f4xx_hal.h"
 #include <stdlib.h>
+
 #include <string.h>
 
 
@@ -68,16 +69,16 @@ typedef struct {
 	U8G2FontHeader_t header;
 
 	const uint8_t *data;
-
-	fnDrawPixel drawFgPixel;
-	fnDrawPixel drawBgPixel;
 } U8G2FontRender_t;
 
 
-U8G2FontRender_t U8G2FontRender(const uint8_t *data, fnDrawPixel drawFgPixel, fnDrawPixel drawBgPixel);
+U8G2FontRender_t U8G2FontRender(const uint8_t *data);
 U8G2FontHeader_t U8G2FontRender_ParseHeader(U8G2FontRender_t *font);
-void U8G2FontRender_PrintChar(U8G2FontRender_t *font, uint8_t *x, uint8_t y, char chr);
-void U8G2FontRender_Print(U8G2FontRender_t *font, uint8_t x, uint8_t y, char *str);
+void U8G2FontRender_ParseGlyphHeader(U8G2FontRender_t *font, U8G2FontGlyph_t *glyph);
+uint16_t U8G2FontRender_GetStartSymbolSearchPostition(U8G2FontRender_t *font, char chr);
+int8_t U8G2FontRender_GetGlyph(U8G2FontRender_t *font, U8G2FontGlyph_t *glyph, uint16_t search_position, char chr);
+//void U8G2FontRender_RenderGlyph(U8G2FontRender_t *font, U8G2FontGlyph_t *glyph, uint8_t x, uint8_t y);
+void U8G2FontRender_RenderGlyphBuf(U8G2FontRender_t *font, U8G2FontGlyph_t *glyph, uint8_t x, uint8_t y, uint16_t fg_color, uint16_t bg_color, uint16_t *buf);
 
 
 #endif /* INC_U8G2_FONT_RENDER_H_ */
