@@ -8,10 +8,13 @@
 #ifndef INC_U8G2_FONT_RENDER_H_
 #define INC_U8G2_FONT_RENDER_H_
 
-#include "stm32f1xx_hal.h"
 #include <stdlib.h>
+#include <stdint.h>
 #include <string.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #define U8G2_FONT_HEADER_SIZE 23
 
@@ -75,9 +78,12 @@ typedef struct {
 
 
 U8G2FontRender_t U8G2FontRender(const uint8_t *data, fnDrawPixel drawFgPixel, fnDrawPixel drawBgPixel);
-U8G2FontHeader_t U8G2FontRender_ParseHeader(U8G2FontRender_t *font);
+U8G2FontHeader_t U8G2FontRender_ParseHeader(const U8G2FontRender_t *font);
 void U8G2FontRender_PrintChar(U8G2FontRender_t *font, uint8_t *x, uint8_t y, char chr);
-void U8G2FontRender_Print(U8G2FontRender_t *font, uint8_t x, uint8_t y, char *str);
+void U8G2FontRender_Print(U8G2FontRender_t *font, uint8_t x, uint8_t y, const char *str);
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* INC_U8G2_FONT_RENDER_H_ */
